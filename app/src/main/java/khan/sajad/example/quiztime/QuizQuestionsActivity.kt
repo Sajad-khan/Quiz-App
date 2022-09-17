@@ -43,42 +43,50 @@ class QuizQuestionsActivity : AppCompatActivity() {
         }
 
         binding.submitBtn.setOnClickListener{
-            if(!submitted){
-                if (selectedOption != null) {
-                    setCorrectOption()
-                    if(correctOption == selectedOption){
-                        correctOption?.background = ContextCompat.getDrawable(this,
-                            R.drawable.correct_option_bg)
-                        correct++
-                    }
-                    else{
-                        correctOption?.background = ContextCompat.getDrawable(this,
-                            R.drawable.correct_option_bg)
-                        selectedOption?.background = ContextCompat.getDrawable(this,
-                            R.drawable.wrong_option_bg)
-                    }
-                    submitted = true
-                    binding.submitBtn.text = "Next"
+            onButtonClick()
+        }
+    }
+
+    private fun onButtonClick() {
+        if (!submitted) {
+            if (selectedOption != null) {
+                setCorrectOption()
+                if (correctOption == selectedOption) {
+                    correctOption?.background = ContextCompat.getDrawable(
+                        this,
+                        drawable.correct_option_bg
+                    )
+                    correct++
+                } else {
+                    correctOption?.background = ContextCompat.getDrawable(
+                        this,
+                        drawable.correct_option_bg
+                    )
+                    selectedOption?.background = ContextCompat.getDrawable(
+                        this,
+                        drawable.wrong_option_bg
+                    )
                 }
-                else{
-                    Toast.makeText(this, "Select an option", Toast.LENGTH_SHORT).show()
-                }
+                submitted = true
+                if(position == questions.size) binding.submitBtn.text = getString(R.string.result)
+                else binding.submitBtn.text = "Next"
+            } else {
+                Toast.makeText(this, "Select an option", Toast.LENGTH_SHORT).show()
             }
-            else{
-                if(position==questions.size){
-                    val intent = Intent(this, Result::class.java)
-                    intent.putExtra("score", correct.toString())
-                    intent.putExtra("name", name)
-                    intent.putExtra("maxScore", questions.size.toString())
-                    startActivity(intent)
-                    finish()
-                }
-                else{
-                    position++
-                    setInitialContent()
-                    submitted = false
-                    selectedOption = null
-                }
+
+        } else {
+            if (position == questions.size) {
+                val intent = Intent(this, Result::class.java)
+                intent.putExtra("score", correct.toString())
+                intent.putExtra("name", name)
+                intent.putExtra("maxScore", questions.size.toString())
+                startActivity(intent)
+                finish()
+            } else {
+                position++
+                setInitialContent()
+                submitted = false
+                selectedOption = null
             }
         }
     }

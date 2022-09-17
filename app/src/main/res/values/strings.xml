@@ -9,4 +9,5 @@
     <string name="congratulate">Congratulations %s!</string>
     <string name="str_progress">%s/%s</string>
     <string name="score">You got %s correct out of %s.</string>
+    <string name="result">Show Result</string>
 </resources>
