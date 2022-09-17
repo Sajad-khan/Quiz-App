@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Quiz Time</string>
+    <string name="quiz_time">Quiz Time!</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="start">Start</string>
+    <string name="submit">Submit</string>
+    <string name="tv_question">Which country does this flag belong to?</string>
+    <string name="congratulate">Congratulations %s!</string>
+    <string name="str_progress">%s/%s</string>
+    <string name="score">You got %s correct out of %s.</string>
+</resources>
