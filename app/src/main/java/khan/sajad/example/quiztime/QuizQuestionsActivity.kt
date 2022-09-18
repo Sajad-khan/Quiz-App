@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import khan.sajad.example.quiztime.Constants.getQuestions
 import khan.sajad.example.quiztime.R.drawable
-import khan.sajad.example.quiztime.Result
 import khan.sajad.example.quiztime.databinding.ActivityQuizQuestionsBinding
 
 class QuizQuestionsActivity : AppCompatActivity() {
@@ -124,9 +123,11 @@ class QuizQuestionsActivity : AppCompatActivity() {
 
     }
     private fun setCorrectOption(){
-        if(questions[position-1].optionCorrect == 1) correctOption = binding.optionOne
-        else if(questions[position-1].optionCorrect == 2) correctOption = binding.optionTwo
-        else if(questions[position-1].optionCorrect == 3) correctOption = binding.optionThree
-        else  correctOption = binding.optionFour
+        correctOption = when (questions[position-1].optionCorrect) {
+            1 -> binding.optionOne
+            2 -> binding.optionTwo
+            3 -> binding.optionThree
+            else -> binding.optionFour
+        }
     }
 }
