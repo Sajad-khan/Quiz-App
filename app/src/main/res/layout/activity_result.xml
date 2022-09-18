@@ -10,17 +10,17 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_margin="50dp"
         android:layout_gravity="center"
         app:cardCornerRadius="8dp"
         android:padding="20dp"
-        style="@style/Widget.Material3.CardView.Elevated"
-        >
+        style="@style/Widget.Material3.CardView.Elevated">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:gravity="center"
             android:background="@color/secondaryLightColor">
             <TextView
                 android:id="@+id/tv_congratulate"

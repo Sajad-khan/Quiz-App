@@ -15,6 +15,5 @@
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
         <item name="android:textViewStyle">@style/Widget.QuizTime.TextView</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:progressBarStyle">@style/Widget.MaterialComponents.LinearProgressIndicator</item>
     </style>
 </resources>

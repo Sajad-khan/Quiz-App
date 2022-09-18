@@ -39,8 +39,9 @@
                android:layout_width="0dp"
                android:layout_gravity="center_vertical"
                android:layout_height="wrap_content"
-               android:layout_weight="1"
+               android:layout_weight="4"
                android:max="9"
+               android:progressTint="@color/primaryDarkColor"
                android:indeterminate="false"
                android:progress="0"
                android:minHeight="48dp"/>
@@ -50,6 +51,7 @@
                android:layout_height="wrap_content"
                tools:text="0/9"
                android:padding="8dp"/>
+
        </LinearLayout>
        <TextView
            android:id="@+id/option_one"

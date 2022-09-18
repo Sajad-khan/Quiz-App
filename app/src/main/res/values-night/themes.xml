@@ -16,6 +16,5 @@
         <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="android:textViewStyle">@style/Widget.QuizTime.TextView</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:progressBarStyle">@style/Widget.MaterialComponents.LinearProgressIndicator</item>
     </style>
 </resources>

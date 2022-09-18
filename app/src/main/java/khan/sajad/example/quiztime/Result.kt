@@ -12,7 +12,7 @@ class Result : AppCompatActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val score = intent.extras?.getString("score")
-        val name = intent.extras?.getString("name")
+        val name = intent.extras?.getString("name")?.trimEnd()
         val maxScore = intent.extras?.getString("maxScore")
         binding.tvCongratulate.text = getString(R.string.congratulate, name)
         binding.tvScore.text = getString(R.string.score, score,maxScore)
