@@ -21,4 +21,5 @@ UI samples:
 
 
 
-![QuizApp_result](https://user-images.githubusercontent.com/91522619/190988181-fb8a14d8-9c4e-4650-a933-60c487301496.png)
+
+![QuizApp_result](https://user-images.githubusercontent.com/91522619/190992477-60fdbd86-0370-4c8a-85b2-8245022b2aad.png)
